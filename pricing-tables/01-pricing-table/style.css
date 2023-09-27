@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap');
+
+:root {
+	--bg-color: #5c539d;
+	--bg-price-table: #1f283b;
+	--text-white: #fff;
+	--text-grey: #ddd;
+	--color-accent: #e33058;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: 'Manrope', sans-serif;
+}
+
+.container {
+	width: 100%;
+	min-height: 100vh;
+	background: var(--bg-color);
+}
+
+.container h2 {
+	color: var(--text-white);
+	font-size: 2rem;
+	padding: 3.125rem 0;
+	text-align: center;
+}
+
+.price-row {
+	width: 90%;
+	max-width: 68.75rem;
+	margin: auto;
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(15.625rem, 1fr));
+	grid-gap: 1.5625rem;
+}
+
+.price-col {
+	background: var(--bg-price-table);
+	padding: 2.5rem;
+	border-radius: 1rem;
+	color: var(--text-white);
+	text-align: center;
+}
+
+.price-col p {
+	font-size: 1.375rem;
+}
+
+.price-col h3 {
+	font-size: 2.75rem;
+	margin: 1.25rem 0 2.5rem;
+	font-weight: 500;
+}
+
+.price-col h3 span {
+	font-size: 1rem;
+}
+
+.price-col ul {
+	text-align: left;
+	list-style: none;
+	margin: 1.25rem 0;
+	color: var(--text-grey);
+}
+
+.price-col ul li {
+	margin: 0.9375rem 0;
+}
+
+.price-col ul li::before {
+	content: '\2022';
+	color: var(--color-accent);
+	font-weight: 700;
+	margin-right: 0.5rem;
+}
+
+.price-col button {
+	width: 100%;
+	padding: 1rem 0;
+	background-color: transparent;
+	color: var(--text-white);
+	border: 1px solid var(--color-accent);
+	border-radius: 0.5rem;
+	margin-top: 1rem;
+	cursor: pointer;
+	transition: all 0.3s ease-in-out;
+}
+
+.price-col button:hover {
+	background: var(--color-accent);
+}
